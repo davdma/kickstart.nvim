@@ -13,3 +13,5 @@ Tips:
 # LSPs
 
 For getting the Language Server Protocol to work for your language of choice so you can have **Go To Definition** and **Go To Reference** commands, you must go into `init.lua` and modify the `local servers = {}` dictionary. Currently I have added python, C/C++ and Rust LSP but if you need other languages you must add them.
+
+I initially had issues with the LSPs not working though they were enabled as configurations - I had to do `:Mason` make sure they were installed (you may have to also press `i`).
