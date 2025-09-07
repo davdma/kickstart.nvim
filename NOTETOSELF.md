@@ -2,7 +2,7 @@
 
 How I started using Kickstart neovim:
 1. Familiarize with neovim/vim commands using `:Tutor`, as well the [neovim manual docs](https://neovim.io/doc/user/usr_toc.html#user-manual) which provide additional useful commands for movement etc. that is skipped in the tutorial
-2. Using the following plugins: `telescope` for fuzzy finding, `nvim-tree` for file explorer, `LSP` language server protocol basics
+2. Using the following plugins: `telescope` for fuzzy finding, `Neotree` for file explorer, `LSP` language server protocol basics
 
 For plugins use `<leader>` which is a special prefix for commands, this is by default set to `spacebar`. **For learning initially, just press `<leader>` and wait to see all available shortcuts you can use.**
 
