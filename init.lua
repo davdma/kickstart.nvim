@@ -152,6 +152,11 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
+-- DAVID MA EDIT FOR GLOBAL TAB DEFAULT TAB SPACES
+vim.opt.tabstop = 4 -- how many spaces a tab counts for
+vim.opt.shiftwidth = 4 -- how many spaces when indenting
+vim.opt.expandtab = true -- convert <Tab> to spaces
+
 -- Preview substitutions live, as you type!
 vim.o.inccommand = 'split'
 
