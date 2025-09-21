@@ -974,26 +974,26 @@ require('lazy').setup({
   },
   {
     -- I added this via Chatgpt for diffview functionality
-    "sindrets/diffview.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    'sindrets/diffview.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local map = vim.keymap.set
       local opts = { noremap = true, silent = true }
 
       -- 🔹 Working tree vs HEAD (what you asked for)
-      map("n", "<leader>dw", "<cmd>DiffviewOpen<CR>", { desc = "Diff: working tree vs HEAD" })
+      map('n', '<leader>dw', '<cmd>DiffviewOpen -uno<CR>', { desc = 'Diff: working tree vs HEAD' })
 
       -- 🔹 Diff against previous commit
-      map("n", "<leader>dp", "<cmd>DiffviewOpen HEAD~1<CR>", { desc = "Diff: previous commit" })
+      map('n', '<leader>dp', '<cmd>DiffviewOpen HEAD~1 -uno<CR>', { desc = 'Diff: previous commit' })
 
       -- 🔹 File history for current file
-      map("n", "<leader>df", "<cmd>DiffviewFileHistory %<CR>", { desc = "Diff: file history" })
+      map('n', '<leader>df', '<cmd>DiffviewFileHistory %<CR>', { desc = 'Diff: file history' })
 
       -- 🔹 File history for entire repo
-      map("n", "<leader>dF", "<cmd>DiffviewFileHistory<CR>", { desc = "Diff: repo history" })
+      map('n', '<leader>dF', '<cmd>DiffviewFileHistory<CR>', { desc = 'Diff: repo history' })
 
       -- 🔹 Close diffview
-      map("n", "<leader>dq", "<cmd>DiffviewClose<CR>", { desc = "Diff: close" })
+      map('n', '<leader>dq', '<cmd>DiffviewClose<CR>', { desc = 'Diff: close' })
     end,
   },
 
