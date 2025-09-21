@@ -972,6 +972,30 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+  {
+    -- I added this via Chatgpt for diffview functionality
+    "sindrets/diffview.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      local map = vim.keymap.set
+      local opts = { noremap = true, silent = true }
+
+      -- 🔹 Working tree vs HEAD (what you asked for)
+      map("n", "<leader>dw", "<cmd>DiffviewOpen<CR>", { desc = "Diff: working tree vs HEAD" })
+
+      -- 🔹 Diff against previous commit
+      map("n", "<leader>dp", "<cmd>DiffviewOpen HEAD~1<CR>", { desc = "Diff: previous commit" })
+
+      -- 🔹 File history for current file
+      map("n", "<leader>df", "<cmd>DiffviewFileHistory %<CR>", { desc = "Diff: file history" })
+
+      -- 🔹 File history for entire repo
+      map("n", "<leader>dF", "<cmd>DiffviewFileHistory<CR>", { desc = "Diff: repo history" })
+
+      -- 🔹 Close diffview
+      map("n", "<leader>dq", "<cmd>DiffviewClose<CR>", { desc = "Diff: close" })
+    end,
+  },
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
